@@ -1,0 +1,25 @@
+---
+    import { getImage } from "astro:assets";
+
+    const { imgMobile, imgDesktop, alt } = Astro.props;
+
+    const mobileImg = await getImage({
+        src: imgMobile,
+        format: 'webp',
+        width: 654,
+        height: 480,
+    });
+
+    const desktopImg = await getImage({
+        src: imgDesktop,
+        format: 'webp',
+        width: 540,
+        height: 446,
+    })
+---
+
+<picture>
+    <source media="(max-width: 768px)" srcset={mobileImg.src} />
+    <source media="(min-width: 769px)" srcset={desktopImg.src} />
+    <img src={desktopImg.src} alt={alt} class="mix-blend-multiply object-cover w-full h-full rounded-t-lg xl:rounded-tl-none xl:rounded-r-lg"/>
+</picture>
