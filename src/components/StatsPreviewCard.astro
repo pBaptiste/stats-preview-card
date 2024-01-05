@@ -23,12 +23,12 @@
     <div class="w-[327px] xl:w-[540px] h-[240px] xl:h-[446px] bg-accent rounded-t-lg xl:rounded-tl-none xl:rounded-r-lg flex-none xl:order-2">
         <ResponsiveImage imgMobile={headerMobile} imgDesktop={headerDesktop} alt=""/>
     </div>
-    <div class="pt-10 xl:pt-[71px] pb-8 xl:pb-[59px] px-8 xl:pl-[72px] xl:pr-[95px]">
+    <div class="pt-10 xl:pt-[71px] pb-8 xl:pb-[59px] px-8 xl:pl-[72px] xl:pr-[110px]">
         <div>
             <h1 class="text-center xl:text-start text-white text-[1.75rem] xl:text-[2.25rem] font-bold leading-8 xl:leading-[2.75rem]">Get <span class="text-accent">insights</span> that help your business grow.</h1>
             <p class="pt-4 xl:pt-[25px] text-center xl:text-start text-white text-[.938rem] font-normal leading-[1.563rem] text-opacity-75">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
         </div>
-        <div class="pt-10 xl:pt-[72px] flex flex-col xl:flex-row xl:justify-between gap-6">
+        <div class="pt-10 xl:pt-[72px] flex flex-col xl:flex-row xl:justify-between gap-6 xl:pr-7">
             {
                 stats.map(item => (
                     <p class="text-center xl:text-start text-white text-2xl font-bold">{item.amount} <span class="block font-lexend text-xs leading-[1.563rem] tracking-[1px] font-normal uppercase opacity-60">{item.name}</span></p>
